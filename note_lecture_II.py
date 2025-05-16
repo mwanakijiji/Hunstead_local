@@ -56,8 +56,6 @@ posterior_full = np.zeros((len(x_0_array),len(y_0_array)))
 for n_datum in range(len(xn_array)):
     print(n_datum)
 
-    
-
     posterior_full = np.nansum([posterior_full, grid_search(x_0_array,y_0_array,xn_array[n_datum])], axis=0)
     #print(np.nansum(np.exp(posterior_full)))
 
